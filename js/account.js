@@ -22,7 +22,13 @@
       show(ordersEmptyEl, true);
       return;
     }
-    window.supabase.from('orders').select('id, status, total, shipping_address, created_at, order_items(products(image_url))').order('created_at', { ascending: false }).then(function (_ref) {
+    var userId = session.user && session.user.id;
+    if (!userId) {
+      show(loadingEl, false);
+      show(ordersEmptyEl, true);
+      return;
+    }
+    window.supabase.from('orders').select('id, status, total, shipping_address, created_at, order_items(products(image_url))').eq('user_id', userId).order('created_at', { ascending: false }).then(function (_ref) {
       var data = _ref.data;
       var err = _ref.error;
       show(loadingEl, false);
