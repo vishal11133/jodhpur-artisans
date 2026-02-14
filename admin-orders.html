@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Orders – House of Crafts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1173d4",
+            "primary-dark": "#0d5aa7",
+            "accent-gold": "#C5A059",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: { "display": ["Be Vietnam Pro", "sans-serif"] },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-100 antialiased">
+  <nav class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="images/logo.png" alt="House of Crafts" class="h-14 w-14 object-contain"/>
+        </a>
+        <div class="flex items-center space-x-4" id="nav-auth-links">
+          <a href="admin.html" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Admin</a>
+          <a href="admin-products.html" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Products</a>
+          <a href="admin-orders.html" class="text-sm font-medium text-primary">Orders</a>
+          <a href="account.html" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Account</a>
+          <button type="button" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary hidden" id="nav-logout">Log out</button>
+          <a href="cart.html" class="text-gray-500 hover:text-primary relative">
+            <span class="material-icons">shopping_bag</span>
+            <span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] min-w-[1rem] h-4 flex items-center justify-center rounded-full px-1" id="nav-cart-count">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Manage Orders</h1>
+    <p id="admin-loading" class="text-gray-500">Checking access…</p>
+    <div id="admin-orders-content" class="hidden">
+      <p id="orders-message" class="text-gray-600 dark:text-gray-400 mb-4 hidden"></p>
+      <div id="orders-list" class="space-y-6"></div>
+      <div id="orders-empty" class="hidden text-center py-16">
+        <p class="text-gray-500">No orders yet.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/admin-orders.js"></script>
+</body>
+</html>

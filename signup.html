@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Our Community – House of Crafts</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1173d4",
+            "primary-hover": "#0e5ea8",
+            "primary-dark": "#0d5aa7",
+            "gold-accent": "#D4AF37",
+            "accent-gold": "#C5A059",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: { "display": ["Be Vietnam Pro", "sans-serif"] },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 20px; }
+    .dark ::-webkit-scrollbar-thumb { background-color: #334155; }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-display min-h-screen flex flex-col antialiased">
+  <main class="flex-grow flex w-full min-h-screen overflow-hidden relative">
+    <div class="hidden lg:flex lg:w-1/2 relative bg-primary/10 overflow-hidden group">
+      <img alt="Artisan working in Jodhpur" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMg44csh1ZMaL7XXgh5BAB_inQZh0ehcDu_cJ7HSUl3jXU_OaYytqi283aOjlxEQRpKdL2YXJ63QkKhyFYJ0oDOHSyKPV8EM1_m7Mvi4S5wBDQlTX-f45RamOMOVG_9QD9hVyIZtHSH4P9nApQTY00xLl-LpKm1lw3R9-mAiFZOReRbBli28zJE2ZWJv13mMkVmQSEssy_SHBq0MH5EVT2LCzG9Klq6LGEx6DyIHWN5GtqQMbG40TmVyl2-yrmm_n3IutnIzKo_CY"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent mix-blend-multiply"></div>
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div class="relative z-10 flex flex-col justify-between h-full w-full p-12 text-white">
+        <a href="index.html" class="flex items-center gap-2 self-start">
+          <img src="images/logo.png" alt="House of Crafts" class="h-14 w-14 object-contain"/>
+        </a>
+        <div class="mb-8">
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl max-w-md shadow-2xl">
+            <span class="text-gold-accent text-4xl font-serif">"</span>
+            <p class="text-lg leading-relaxed font-light mb-4 -mt-4 relative z-10">Crafting isn't just a skill here; it's a prayer we offer with our hands. Every piece tells the story of the Blue City.</p>
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-full overflow-hidden border-2 border-gold-accent">
+                <img alt="Master artisan" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_L6RBWJH7amLjhV-w0KmSQO5WfTuTYMjNImkQS78w_hxOuHF4ExgwL7TefjwzY7O4bNQm9UglQ2xc-CYh3CrOZulCty71_VIne8dQ83r8UlPJLklipavwK-hZgt5YaiGG0Ejyskpbfz0x7XoYVxUZwW7ppw-YnnqtEOlnfjQQQprpeJMhgtk40RT3ceY6HQof3GqrzADV07KPFTlfrj8z7LPUyK_BFBEVjUH7PegoLoxv1MaHKj1bbtfYMqSGUQNt0TBtr9D-g-Q"/>
+              </div>
+              <div>
+                <p class="font-semibold text-sm">Rajesh Prajapat</p>
+                <p class="text-xs text-white/70">Master Potter, 35 Years Exp.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-center p-6 sm:p-12 lg:p-16 overflow-y-auto bg-background-light dark:bg-background-dark relative">
+      <div class="lg:hidden absolute top-6 left-6 flex items-center gap-2">
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="images/logo.png" alt="House of Crafts" class="h-14 w-14 object-contain"/>
+        </a>
+      </div>
+      <div class="w-full max-w-md space-y-8">
+        <div class="text-center sm:text-left space-y-2">
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">Join Our <span class="text-primary">Community</span></h2>
+          <p class="text-slate-500 dark:text-slate-400 text-sm md:text-base">Unlock exclusive access to authentic heritage and handcrafted masterpieces.</p>
+        </div>
+        <form id="signup-form" class="space-y-5" method="POST" action="#">
+          <div>
+            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5" for="fullname">Full Name</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"><span class="material-icons text-slate-400 text-[20px]">person</span></span>
+              <input class="block w-full pl-10 pr-3 py-3 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary sm:text-sm" id="fullname" name="fullname" placeholder="e.g. Aarav Singh" type="text" required/>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5" for="email">Email Address</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"><span class="material-icons text-slate-400 text-[20px]">email</span></span>
+              <input class="block w-full pl-10 pr-3 py-3 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary sm:text-sm" id="email" name="email" placeholder="name@example.com" type="email" required/>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5" for="phone">Phone Number</label>
+            <div class="relative flex rounded-lg shadow-sm">
+              <span class="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-500 dark:text-slate-400 sm:text-sm">+91</span>
+              <input class="flex-1 min-w-0 block w-full px-3 py-3 rounded-none rounded-r-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary sm:text-sm" id="phone" name="phone" placeholder="98765 43210" type="tel"/>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5" for="password">Password</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"><span class="material-icons text-slate-400 text-[20px]">lock</span></span>
+              <input class="block w-full pl-10 pr-10 py-3 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary sm:text-sm" id="password" name="password" placeholder="Create a strong password" type="password" required minlength="8"/>
+              <button type="button" class="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer toggle-password" aria-label="Toggle password visibility">
+                <span class="material-icons text-slate-400 text-[20px]">visibility</span>
+              </button>
+            </div>
+            <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">Must be at least 8 characters long.</p>
+          </div>
+          <div class="flex items-center">
+            <input class="h-4 w-4 text-primary focus:ring-primary border-slate-300 rounded dark:bg-slate-800 dark:border-slate-600" id="terms" name="terms" type="checkbox" required/>
+            <label class="ml-2 block text-sm text-slate-600 dark:text-slate-400" for="terms">I agree to the <a class="text-primary hover:underline" href="#">Terms</a> and <a class="text-primary hover:underline" href="#">Privacy Policy</a></label>
+          </div>
+          <p class="text-sm text-red-600 dark:text-red-400 hidden" id="signup-error"></p>
+          <div>
+            <button class="w-full flex justify-center py-3.5 px-4 border border-transparent rounded-lg shadow-sm text-sm font-semibold text-white bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200" type="submit" id="signup-btn">Create Account</button>
+          </div>
+        </form>
+        <div class="relative">
+          <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-200 dark:border-slate-700"></div></div>
+          <div class="relative flex justify-center text-sm"><span class="px-4 bg-background-light dark:bg-background-dark text-slate-500 dark:text-slate-400">Or continue with</span></div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <button type="button" class="flex items-center justify-center px-4 py-2.5 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" disabled title="Coming soon">Google</button>
+          <button type="button" class="flex items-center justify-center px-4 py-2.5 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" disabled title="Coming soon">Facebook</button>
+        </div>
+        <p class="text-center text-sm text-slate-600 dark:text-slate-400">Already have an account? <a class="font-semibold text-primary hover:underline" href="login.html">Log in</a></p>
+      </div>
+    </div>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>
