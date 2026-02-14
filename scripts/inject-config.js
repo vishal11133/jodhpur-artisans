@@ -20,6 +20,9 @@ if (fs.existsSync(envPath)) {
 
 var url = process.env.SUPABASE_URL || '';
 var key = process.env.SUPABASE_ANON_KEY || '';
+if (!url || !key || url === 'https://your-project.supabase.co' || key === 'your-anon-key') {
+  console.warn('Warning: SUPABASE_URL or SUPABASE_ANON_KEY is missing or still placeholder. Check .env in project root and run this script again.');
+}
 var out = path.join(__dirname, '..', 'js', 'config.js');
 var content = '// Injected at build time. Do not commit real keys.\n' +
   'window.__SUPABASE_URL__ = "' + url.replace(/"/g, '\\"') + '";\n' +

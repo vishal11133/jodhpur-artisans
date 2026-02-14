@@ -12,20 +12,22 @@
   function renderProductCard(p) {
     var badge = p.badge === 'new_arrival' ? '<span class="absolute top-4 left-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-2 py-1 rounded">NEW ARRIVAL</span>' : (p.badge === 'best_seller' ? '<span class="absolute top-4 left-4 bg-accent-gold text-white text-xs font-bold px-2 py-1 rounded">BEST SELLER</span>' : '');
     return (
-      '<div class="w-full min-w-0 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 group">' +
-        '<div class="relative aspect-[4/5] overflow-hidden rounded-t-xl bg-gray-100">' +
-          '<img alt="" class="w-full h-full object-cover" src="' + (p.image_url || '') + '"/>' + badge +
-          '<button type="button" class="absolute bottom-4 right-4 bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center translate-y-14 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-lg add-to-cart-btn" data-product-id="' + p.id + '">' +
-            '<span class="material-icons text-sm">add_shopping_cart</span>' +
-          '</button>' +
-        '</div>' +
-        '<div class="p-6">' +
-          '<h3 class="font-bold text-lg text-gray-900 dark:text-white mb-1">' + (p.name || '') + '</h3>' +
-          '<p class="text-sm text-gray-500 mb-3">' + (p.category || '') + '</p>' +
-          '<div class="flex items-center justify-between">' +
-            '<span class="text-primary font-bold text-lg">₹' + formatPrice(p.price) + '</span>' +
+      '<div class="w-full min-w-0 relative bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 group">' +
+        '<a href="product.html?id=' + encodeURIComponent(p.id) + '" class="block">' +
+          '<div class="relative aspect-[4/5] overflow-hidden rounded-t-xl bg-gray-100">' +
+            '<img alt="" class="w-full h-full object-cover" src="' + (p.image_url || '') + '"/>' + badge +
           '</div>' +
-        '</div>' +
+          '<div class="p-6">' +
+            '<h3 class="font-bold text-lg text-gray-900 dark:text-white mb-1">' + (p.name || '') + '</h3>' +
+            '<p class="text-sm text-gray-500 mb-3">' + (p.category || '') + '</p>' +
+            '<div class="flex items-center justify-between">' +
+              '<span class="text-primary font-bold text-lg">₹' + formatPrice(p.price) + '</span>' +
+            '</div>' +
+          '</div>' +
+        '</a>' +
+        '<button type="button" class="absolute bottom-4 right-4 bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center translate-y-14 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-lg add-to-cart-btn z-10" data-product-id="' + p.id + '">' +
+          '<span class="material-icons text-sm">add_shopping_cart</span>' +
+        '</button>' +
       '</div>'
     );
   }
